@@ -9,6 +9,6 @@ import Form from './component/Form.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar/>
-    {/* <Form/> */}
+    <Form/>
   </StrictMode>,
 )
