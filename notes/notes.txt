@@ -15,3 +15,78 @@ creating app :-
        npm run dev
 
 ---------------------------------------------------------------------------------------------------------------------------------  
+
+React Router :- 
+
+   1) Third-party library
+   --> npm install react-router-dom
+
+   2) In React (using React Router), both Link and NavLink are used for client-side navigation (without reloading the page).
+
+   3) Link :-  
+      What it is :- 
+         - a) A basic navigation component.
+         - b) Used to navigate between routes.
+         - c) Does not know if the route is currently active.
+
+      syntax :- 
+         import { Link } from "react-router-dom";
+         <Link to="/home">Home</Link>
+
+      Key Points :- 
+         - a) Similar to <a href=""> but no page reload.
+         - b) No automatic active styling.
+         - c) Base for simple navigation.
+
+      Use Cases :- 
+         - a) Buttons
+         - b) Links inside content.
+         - c) when you don't care about active state.
+
+   4) NavLink :- 
+      What it is :- 
+         - a) An enhanced version of Link.
+         - b) Automatically detects active routes.
+         - c) Adds active styles or classes.
+
+      Syntax :- 
+         import { NavLink } from "react-router-dom";
+         <NavLink to="/home">Home</NavLink>
+
+         With Active Styling :- 
+            <NavLink
+               to="/home"
+               className={({ isActive }) => isActive ? "active" : ""}
+            >
+               Home
+            </NavLink>
+
+      Key Points :-  
+         - a) Knows when the route is active.
+         - b) Can apply :- 
+               - className
+               - style
+         - c) Ideal for navigation menus.
+
+      Use Cases :- 
+         - a) Navbar
+         - b) Sidebar 
+         - c) Tabs
+
+   +------------------------+--------------+------------------+
+   | Feature                | Link         | NavLink          |
+   +------------------------+--------------+------------------+
+   | Navigation             | ✅ Yes       | ✅ Yes           |
+   | Page reload            | ❌ No        | ❌ No            |
+   | Active route detection | ❌ No        | ✅ Yes           |
+   | Styling support        | Manual       | Automatic        |
+   | Best for               | Simple links | Menus / Navbars  |
+   +------------------------+--------------+------------------+
+
+   When to use what ? 
+      - a) Use `Link` :- Simple Navigation
+      - b) Use `NavLink` :- When you need active highlighting
+
+
+
+
