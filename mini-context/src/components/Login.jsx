@@ -11,21 +11,33 @@ function Login() {
         e.preventDefault()
         setUser({username, password})
     }
+    
   return (
     <div>
-        <h2>Login</h2>
-        <input type='text'
-        value={username}
-        onChange={(e) => setUsername(e.target.value) }
-        placeholder='username'  />
-        {" "}
-        <input type='text' 
-        value={password}
-        onChange={(e) => setPassword(e.target.value) }
-        placeholder='password'  />
-        <button onClick={handleSubmit}>Submit</button>
+      <div className="container text-center mt-5 w-50">
+        <div className="row mb-2 text-center">
+          <div className="col-12">
+            <h3>Login</h3>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-5">
+            <input type="text" className="form-control" value={username} placeholder='username'
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="col-5">
+            <input type='password' className="form-control" value={password} placeholder='password'
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="col-2">
+            <button onClick={handleSubmit} className="btn btn-primary">Submit</button> 
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-export default Login
+export default Login;
