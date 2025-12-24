@@ -88,5 +88,9 @@ React Router :-
       - b) Use `NavLink` :- When you need active highlighting
 
 
+---------------------------------------------------------------------------------------------------------------------------------
 
+Redux :-  A JS library for predictable and maintainable global state management
+
+Library needed :- Redux + react-redux
 
