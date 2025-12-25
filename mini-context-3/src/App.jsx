@@ -7,10 +7,7 @@ function App() {
   const [todos, setTodos] = useState([])
 
   const addTodo = (todo) => {
-    // console.log(`Todos is :- ${JSON.stringify(todo)}`)
-    // console.log(`Todos is :- ${({...todo})}`)
-    // setTodos((prev) => [{id: Date.now(), ...todo}, ...prev] )
-    setTodos((prev) => [{id: Date.now(), ...todo}] )
+    setTodos((prev) => [{id: Date.now(), ...todo}, ...prev] )
   }
 
   const updateTodo = (id, todo) => {

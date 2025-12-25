@@ -94,3 +94,8 @@ Redux :-  A JS library for predictable and maintainable global state management
 
 Library needed :- Redux + react-redux
 
+Installation :- 
+   1) npm create vite@latest
+   2) npm install @redux/toolkit
+   3) npm install react-redux
+
